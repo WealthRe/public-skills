@@ -1,0 +1,73 @@
+{
+  "name": "aliyun-tts-cosyvoice",
+  "version": "1.0.0",
+  "description": "阿里云 CosyVoice 声音复刻与语音合成 Skill。支持声音复刻（创建自定义音色）和语音合成，支持北京和新加坡地域。仅适用于 CosyVoice 系列模型。",
+  "author": "",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "clone",
+      "description": "创建声音复刻音色",
+      "executable": "voice_cloning.py",
+      "args": ["create"]
+    },
+    {
+      "name": "list",
+      "description": "列出已创建的音色",
+      "executable": "voice_cloning.py",
+      "args": ["list"]
+    },
+    {
+      "name": "query",
+      "description": "查询指定音色详情",
+      "executable": "voice_cloning.py",
+      "args": ["query"]
+    },
+    {
+      "name": "delete",
+      "description": "删除指定音色",
+      "executable": "voice_cloning.py",
+      "args": ["delete"]
+    },
+    {
+      "name": "synthesize",
+      "description": "语音合成",
+      "executable": "voice_synthesis.py",
+      "args": ["synthesize"]
+    }
+  ],
+  "dependencies": [
+    "dashscope>=1.18.0"
+  ],
+  "requirements": {
+    "python": ">=3.8"
+  },
+  "security": {
+    "notes": [
+      "无硬编码 API Key",
+      "无硬编码音频 URL",
+      "无硬编码音色名称",
+      "推荐使用环境变量 DASHSCOPE_API_KEY 提供 API Key"
+    ],
+    "sensitive_data": [
+      "API Key (用户提供)",
+      "音频 URL (用户提供)",
+      "音色 ID (用户提供)"
+    ]
+  },
+  "keywords": [
+    "aliyun",
+    "cosyvoice",
+    "tts",
+    "text-to-speech",
+    "voice-cloning",
+    "语音合成",
+    "声音复刻",
+    "阿里云"
+  ],
+  "categories": [
+    "audio",
+    "tts",
+    "aliyun"
+  ]
+}
