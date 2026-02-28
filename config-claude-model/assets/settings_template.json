@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "sk-sp-your-token-here",
+    "ANTHROPIC_MODEL": "qwen3-max-2026-01-23"
+  },
+  "permissions": {
+    "allow": [
+      "Read", "Edit", "Write", "Glob", "Grep", "NotebookEdit", "Bash",
+      "Task", "TaskOutput", "TaskStop", "TaskCreate", "TaskUpdate",
+      "TaskList", "TaskGet", "WebFetch", "WebSearch", "AskUserQuestion",
+      "EnterPlanMode", "ExitPlanMode", "Skill", "mcp__pencil__*"
+    ],
+    "defaultMode": "default"
+  }
+}

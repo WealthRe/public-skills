@@ -1,0 +1,17 @@
+{
+  "name": "aliyun-asr",
+  "version": "1.0.0",
+  "description": "阿里云千问3-ASR-Flash 语音识别 Skill。支持北京和新加坡地域，识别本地语音文件。",
+  "author": {
+    "name": "User"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-skill",
+    "claude-code",
+    "aliyun",
+    "asr",
+    "speech-recognition",
+    "qwen"
+  ]
+}
