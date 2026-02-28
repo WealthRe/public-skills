@@ -1,11 +1,13 @@
 ---
-name: aliyun-tts
-description: 阿里云千问 TTS 语音合成 Skill。支持声音复刻和语音合成，支持北京和新加坡地域，支持系统音色和复刻音色。
+name: aliyun-tts-qwen
+description: 阿里云千问 TTS 语音合成 Skill，专门用于 qwen3-tts 系列模型。支持声音复刻和语音合成，支持北京和新加坡地域，支持系统音色和复刻音色。仅适用于千问3-TTS系列模型，其他模型不适用。
 ---
 
-# 阿里云 TTS 语音合成 Skill
+# 阿里云千问 TTS 语音合成 Skill
 
-使用阿里云千问 TTS 模型进行声音复刻和语音合成。
+使用阿里云千问3-TTS (qwen3-tts) 系列模型进行声音复刻和语音合成。
+
+**注意**：本 Skill 仅适用于 qwen3-tts 系列模型，其他模型不适用。
 
 ## 支持的地域
 
@@ -49,7 +51,7 @@ description: 阿里云千问 TTS 语音合成 Skill。支持声音复刻和语�
 6. 调用复刻脚本
 
 ```bash
-python3 ~/.claude/skills/aliyun-tts/voice_cloning.py create <音频文件绝对路径> \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_cloning.py create <音频文件绝对路径> \
     --region [beijing|singapore|us] \
     --api-key <API_KEY> \
     --model <目标模型> \
@@ -59,7 +61,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_cloning.py create <音频文件绝对�
 ### 2. 查询音色列表
 
 ```bash
-python3 ~/.claude/skills/aliyun-tts/voice_cloning.py list \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_cloning.py list \
     --region [beijing|singapore|us] \
     --api-key <API_KEY>
 ```
@@ -75,7 +77,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_cloning.py list \
 6. 调用合成脚本
 
 ```bash
-python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "<文本>" \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py synthesize "<文本>" \
     --region [beijing|singapore|us] \
     --api-key <API_KEY> \
     --model <模型> \
@@ -86,7 +88,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "<文本>" \
 ### 4. 列出系统音色
 
 ```bash
-python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py list-voices
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py list-voices
 ```
 
 ## 直接使用命令示例
@@ -95,7 +97,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py list-voices
 
 ```bash
 # 北京地域，使用非流式模型
-python3 ~/.claude/skills/aliyun-tts/voice_cloning.py create \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_cloning.py create \
     /absolute/path/to/voice.m4a \
     --region beijing \
     --api-key sk-xxx \
@@ -107,7 +109,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_cloning.py create \
 
 ```bash
 # 使用系统音色
-python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "你好" \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py synthesize "你好" \
     --region beijing \
     --api-key sk-xxx \
     --model qwen3-tts-flash \
@@ -115,7 +117,7 @@ python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "你好" \
     --output /absolute/path/to/output.wav
 
 # 使用复刻音色（模型必须与创建时一致）
-python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "你好" \
+python3 ~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py synthesize "你好" \
     --region beijing \
     --api-key sk-xxx \
     --model qwen3-tts-vc-2026-01-22 \
@@ -133,8 +135,8 @@ python3 ~/.claude/skills/aliyun-tts/voice_synthesis.py synthesize "你好" \
 
 ## 关键路径
 
-Skill 目录：`~/.claude/skills/aliyun-tts/`
+Skill 目录：`~/.claude/skills/aliyun-tts-qwen/`
 
-声音复刻脚本：`~/.claude/skills/aliyun-tts/voice_cloning.py`
+声音复刻脚本：`~/.claude/skills/aliyun-tts-qwen/voice_cloning.py`
 
-语音合成脚本：`~/.claude/skills/aliyun-tts/voice_synthesis.py`
+语音合成脚本：`~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py`
