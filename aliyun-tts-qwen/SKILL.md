@@ -133,6 +133,11 @@ python3 ~/.claude/skills/aliyun-tts-qwen/voice_synthesis.py synthesize "你好" 
 - 声道：单声道
 - 其他：无背景噪音，语音清晰
 
+## 相关文档
+
+- [千问 TTS 声音复刻官方文档](https://help.aliyun.com/zh/model-studio/qwen-tts-voice-cloning)
+- [千问 TTS 语音合成官方文档](https://help.aliyun.com/zh/model-studio/qwen-tts)
+
 ## 关键路径
 
 Skill 目录：`~/.claude/skills/aliyun-tts-qwen/`

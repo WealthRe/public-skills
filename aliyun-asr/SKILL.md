@@ -57,6 +57,10 @@ python3 ~/.claude/skills/aliyun-asr/recognize_amr.py --region singapore --api-ke
 - WAV
 - 其他阿里云 ASR 支持的格式
 
+## 相关文档
+
+- [千问语音识别官方文档](https://help.aliyun.com/zh/model-studio/qwen-speech-recognition?spm=a2c4g.11186623.0.0.1191984c8zb12y#9687ea01133mn)
+
 ## 关键路径
 
 Skill 目录：`~/.claude/skills/aliyun-asr/`

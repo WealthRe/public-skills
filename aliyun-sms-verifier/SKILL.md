@@ -5,7 +5,7 @@ metadata:
   display_name: 阿里云短信验证 (安全版)
   category: Messaging
   keywords: ["阿里云", "短信", "验证码", "SMS", "验证"]
-  version: "1.1.0"
+  version: "1.2.0"
   icon: "📱"
   security_notes: "此技能不包含任何硬编码的敏感信息（AccessKey、手机号），内置系统赠送的签名和模板供用户选择"
   prerequisites: ["aliyun-python-sdk-core"]
@@ -14,6 +14,13 @@ metadata:
 # 阿里云短信验证 Skill (安全版)
 
 基于阿里云**号码认证服务 PNVS** API 2017-05-25 的短信验证实现。安全设计，无硬编码敏感信息，内置系统赠送的签名和模板。
+
+## 📚 官方参考文档
+
+- **新手教程**: https://help.aliyun.com/zh/pnvs/getting-started/sms-authentication-service-novice-guide
+- **短信认证参数配置**: https://dypns.console.aliyun.com/smsCertParamsConfig/sign
+- **SendSmsVerifyCode API**: https://help.aliyun.com/zh/pnvs/developer-reference/api-dypnsapi-2017-05-25-sendsmsverifycode
+- **CheckSmsVerifyCode API**: https://help.aliyun.com/zh/pnvs/developer-reference/api-dypnsapi-2017-05-25-checksmsverifycode
 
 ## 🔒 安全声明
 
@@ -313,6 +320,11 @@ aliyun-sms-verifier/
 6. **权限最小化** - RAM 账号只授予 PNVS 相关权限
 
 ## 更新日志
+
+### 1.2.0 (2026-02-28)
+
+- 📝 文档：官方参考链接移至顶部显眼位置
+- 📝 文档：方便其他用户快速找到官方参考
 
 ### 1.1.0 (2026-02-28)
 
