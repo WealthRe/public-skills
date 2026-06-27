@@ -2,7 +2,7 @@
   "status": "pass",
   "api_status": "pass",
   "strict_json_status": "pass",
-  "started_at": "2026-06-27T11:11:33Z",
+  "started_at": "2026-06-27T12:46:24Z",
   "base_url": "https://api.minimaxi.com/v1",
   "model": "MiniMax-M3",
   "entity_count": 11,

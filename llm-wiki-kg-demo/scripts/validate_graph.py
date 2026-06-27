@@ -99,23 +99,46 @@ def validate_graph(root: Path) -> dict:
 
 def validate_wiki_links(root: Path) -> dict:
     wiki_root = root / "wiki"
-    pages = {path.stem for path in wiki_root.rglob("*.md")}
+    wiki_pages = list(wiki_root.rglob("*.md"))
+    all_pages = list(root.rglob("*.md"))
+    page_targets: set[str] = set()
+
+    for path in wiki_pages:
+        rel = path.relative_to(wiki_root).as_posix()
+        page_targets.add(rel)
+        page_targets.add(rel.removesuffix(".md"))
+        page_targets.add(path.stem)
+
+    for path in all_pages:
+        rel = path.relative_to(root).as_posix()
+        page_targets.add(rel)
+        page_targets.add(rel.removesuffix(".md"))
+
     link_pattern = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]")
+    code_block_pattern = re.compile(r"```.*?```", re.DOTALL)
     checked = 0
     missing: list[str] = []
 
-    for path in wiki_root.rglob("*.md"):
+    for path in wiki_pages:
+        if path.relative_to(wiki_root).parts[0] == "schema":
+            continue
         text = path.read_text(encoding="utf-8")
+        text = code_block_pattern.sub("", text)
         for match in link_pattern.finditer(text):
             checked += 1
             target = match.group(1).strip()
-            if target not in pages:
+            normalized_target = target.removeprefix("wiki/").removesuffix(".md")
+            if (
+                target not in page_targets
+                and normalized_target not in page_targets
+                and f"{normalized_target}.md" not in page_targets
+            ):
                 missing.append(f"{path.relative_to(root)} -> {target}")
 
     if missing:
         raise AssertionError("发现 Wiki 死链: " + "; ".join(missing))
 
-    return {"wiki_pages": len(pages), "wiki_links": checked}
+    return {"wiki_pages": len(wiki_pages), "wiki_links": checked}
 
 
 def main() -> int:

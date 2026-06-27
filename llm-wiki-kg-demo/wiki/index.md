@@ -1,23 +1,23 @@
-# LLM Wiki 索引
+# Wiki Index
 
-这个 Wiki 由假源资料生成，用于验证双向链接和知识图谱流程。
+> 自动生成的知识库目录
 
-## 产品
-
-- [[品原AI一体机]]
-- [[AI原生推理平台]]
-
-## 概念
-
-- [[模型推理]]
-- [[边缘推理]]
-- [[报价边界]]
+> Note: Text in backticks after page names shows aliases — alternative names, abbreviations, or translations.
 
 ## 实体
 
-- [[GCU]]
-- [[医院边缘推理 POC]]
+- [[entities/AI-原生推理平台|AI-原生推理平台]] `aliases: AI Inference Platform, 推理平台, AI原生推理平台` - type: entity
+- [[entities/品原-AI-一体机|品原-AI-一体机]] `aliases: 品原一体机, 品原AI一体机` - type: entity
+- [[entities/华东零售门店边缘推理-POC|华东零售门店边缘推理-POC]] `aliases: 华东零售边缘推理 POC, 零售门店 POC` - type: entity
+- [[entities/医院边缘推理 POC|医院边缘推理 POC]] - 医院边缘推理 POC 是本 demo 中的假想案例，用于验证 [[品原AI一体机]] 在 [[边缘推理]]、视频分析和本地 [[模型推理]] 场景中的关系。
+- [[entities/GCU|GCU]] - GCU 是本 demo 中的假想推理加速组件，用于支持 [[品原AI一体机]] 的 [[模型推理]]。
 
-## 来源规则
+## 概念
 
-生成页面必须引用 `llm-wiki-kg-demo/sources/` 下的来源文件。
+- [[concepts/边缘推理|边缘推理]] - created: 2026-06-27
+- [[concepts/模型推理|模型推理]] - created: 2026-06-27
+- [[concepts/报价边界|报价边界]] - created: 2026-06-27
+
+## 来源
+
+- [[sources/2026-06-27-retail-edge-poc_0f3c2f|2026-06-27-retail-edge-poc_0f3c2f]] `aliases: 华东零售边缘推理 POC 记录, Retail Edge Inference POC Record`
