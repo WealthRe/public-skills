@@ -128,9 +128,14 @@ def main() -> int:
     graph_summary = validate_graph(root)
     wiki_summary = validate_wiki_links(root)
 
+    try:
+        display_root = str(root.relative_to(Path.cwd().resolve()))
+    except ValueError:
+        display_root = root.name
+
     summary = {
         "status": "pass",
-        "root": str(root),
+        "root": display_root,
         **graph_summary,
         **wiki_summary,
     }
@@ -140,4 +145,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
