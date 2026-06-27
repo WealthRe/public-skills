@@ -1,0 +1,10 @@
+{"id":"product:pinyuan-ai-appliance","name":"品原AI一体机","type":"product","aliases":["品原AI一体化机"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md"]}
+{"id":"product:ai-native-inference-platform","name":"AI原生推理平台","type":"product","aliases":["云原生推理平台"],"source_paths":["llm-wiki-kg-demo/sources/products/ai-native-inference-platform.md"]}
+{"id":"capability:model-inference","name":"模型推理","type":"capability","aliases":["模型推理服务","模型服务"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","llm-wiki-kg-demo/sources/products/ai-native-inference-platform.md"]}
+{"id":"capability:video-analytics","name":"视频分析","type":"capability","aliases":["视频流分析"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md"]}
+{"id":"capability:resource-monitoring","name":"资源监控","type":"capability","aliases":["资源状态监控"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md"]}
+{"id":"component:gcu","name":"GCU","type":"component","aliases":["推理加速组件"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md"]}
+{"id":"scenario:edge-inference","name":"边缘推理","type":"scenario","aliases":["医院边缘推理"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md"]}
+{"id":"case:hospital-edge-inference-poc","name":"医院边缘推理 POC","type":"case","aliases":[],"source_paths":["llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md"]}
+{"id":"boundary:pricing-not-final","name":"报价边界","type":"boundary","aliases":["非正式报价边界"],"source_paths":["llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md"]}
+

@@ -1,0 +1,11 @@
+{"source_id":"product:pinyuan-ai-appliance","relation":"has_capability","target_id":"capability:model-inference","evidence_id":"evidence:000001","confidence":"high"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"has_capability","target_id":"capability:video-analytics","evidence_id":"evidence:000002","confidence":"high"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"has_capability","target_id":"capability:resource-monitoring","evidence_id":"evidence:000003","confidence":"high"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"has_component","target_id":"component:gcu","evidence_id":"evidence:000004","confidence":"high"}
+{"source_id":"component:gcu","relation":"depends_on","target_id":"capability:model-inference","evidence_id":"evidence:000004","confidence":"medium"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"supports_scenario","target_id":"scenario:edge-inference","evidence_id":"evidence:000005","confidence":"high"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"used_in_case","target_id":"case:hospital-edge-inference-poc","evidence_id":"evidence:000006","confidence":"high"}
+{"source_id":"case:hospital-edge-inference-poc","relation":"documents_capability","target_id":"capability:video-analytics","evidence_id":"evidence:000007","confidence":"medium"}
+{"source_id":"product:pinyuan-ai-appliance","relation":"constrained_by","target_id":"boundary:pricing-not-final","evidence_id":"evidence:000008","confidence":"high"}
+{"source_id":"product:ai-native-inference-platform","relation":"has_capability","target_id":"capability:model-inference","evidence_id":"evidence:000009","confidence":"high"}
+

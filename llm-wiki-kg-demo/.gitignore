@@ -1,0 +1,4 @@
+.env
+.obsidian/
+reports/raw-*.json
+

@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "root": "/Users/wealthre/Downloads/project/ai-gtm/public-skills-llmwiki-demo/llm-wiki-kg-demo",
+  "entities": 9,
+  "relations": 10,
+  "evidence": 9,
+  "wiki_pages": 9,
+  "wiki_links": 37
+}

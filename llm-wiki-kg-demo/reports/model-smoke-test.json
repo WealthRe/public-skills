@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "api_status": "pass",
+  "strict_json_status": "pass",
+  "started_at": "2026-06-27T10:52:55Z",
+  "base_url": "https://api.minimaxi.com/v1",
+  "model": "MiniMax-M3",
+  "entity_count": 11,
+  "relation_count": 10,
+  "sample_entity_names": [
+    "品原AI一体机",
+    "模型推理服务",
+    "视频分析",
+    "资源监控",
+    "GCU"
+  ]
+}
