@@ -1,8 +1,8 @@
-# Knowledge Graph Index
+# 知识图谱索引
 
-This graph is a lightweight JSONL graph for fake validation data.
+这个图谱是基于假验证数据构建的轻量 JSONL 图谱。
 
-## Files
+## 文件
 
 - `schema.md`
 - `entities.jsonl`
@@ -10,11 +10,10 @@ This graph is a lightweight JSONL graph for fake validation data.
 - `evidence.jsonl`
 - `validation.md`
 
-## Supported Demo Queries
+## 支持验证的问题
 
-- What capabilities does 品原AI一体机 have?
-- Which component accelerates 模型推理?
-- Which case uses 品原AI一体机?
-- Which product shares 模型推理 with 品原AI一体机?
-- Which boundary limits pricing information?
-
+- 品原AI一体机有哪些能力？
+- 哪个组件用于加速模型推理？
+- 哪个案例使用了品原AI一体机？
+- 哪个产品与品原AI一体机共享模型推理概念？
+- 哪个边界限制了报价信息的使用？

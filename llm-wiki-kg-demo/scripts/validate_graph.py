@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the demo LLM Wiki and JSONL knowledge graph."""
+"""校验 demo 的 LLM Wiki 和 JSONL 知识图谱。"""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ def load_jsonl(path: Path) -> list[dict]:
             try:
                 rows.append(json.loads(line))
             except json.JSONDecodeError as exc:
-                raise AssertionError(f"{path}:{line_no} invalid JSON: {exc}") from exc
+                raise AssertionError(f"{path}:{line_no} 不是合法 JSON: {exc}") from exc
     return rows
 
 
@@ -49,7 +49,7 @@ def validate_required_files(root: Path) -> None:
     ]
     missing = [str(path) for path in required if not path.exists()]
     if missing:
-        raise AssertionError("Missing required files: " + ", ".join(missing))
+        raise AssertionError("缺少必要文件: " + ", ".join(missing))
 
 
 def validate_graph(root: Path) -> dict:
@@ -61,34 +61,34 @@ def validate_graph(root: Path) -> dict:
     evidence_ids = {row["id"] for row in evidence}
 
     if len(entity_ids) != len(entities):
-        raise AssertionError("Duplicate entity IDs found")
+        raise AssertionError("发现重复实体 ID")
     if len(evidence_ids) != len(evidence):
-        raise AssertionError("Duplicate evidence IDs found")
+        raise AssertionError("发现重复证据 ID")
 
     for row in entities:
         for field in ("id", "name", "type", "source_paths"):
             if field not in row:
-                raise AssertionError(f"Entity missing {field}: {row}")
+                raise AssertionError(f"实体缺少字段 {field}: {row}")
         for source_path in row["source_paths"]:
             if not (root.parent / source_path).exists():
-                raise AssertionError(f"Entity source path does not exist: {source_path}")
+                raise AssertionError(f"实体来源路径不存在: {source_path}")
 
     for row in evidence:
         if not (root.parent / row["path"]).exists():
-            raise AssertionError(f"Evidence path does not exist: {row['path']}")
+            raise AssertionError(f"证据路径不存在: {row['path']}")
 
     for row in relations:
         for field in ("source_id", "relation", "target_id", "evidence_id"):
             if field not in row:
-                raise AssertionError(f"Relation missing {field}: {row}")
+                raise AssertionError(f"关系缺少字段 {field}: {row}")
         if row["source_id"] not in entity_ids:
-            raise AssertionError(f"Relation source not found: {row['source_id']}")
+            raise AssertionError(f"关系源实体不存在: {row['source_id']}")
         if row["target_id"] not in entity_ids:
-            raise AssertionError(f"Relation target not found: {row['target_id']}")
+            raise AssertionError(f"关系目标实体不存在: {row['target_id']}")
         if row["evidence_id"] not in evidence_ids:
-            raise AssertionError(f"Relation evidence not found: {row['evidence_id']}")
+            raise AssertionError(f"关系证据不存在: {row['evidence_id']}")
         if row["relation"] not in ALLOWED_RELATIONS:
-            raise AssertionError(f"Relation type not allowed: {row['relation']}")
+            raise AssertionError(f"关系类型不在允许列表中: {row['relation']}")
 
     return {
         "entities": len(entities),
@@ -113,14 +113,14 @@ def validate_wiki_links(root: Path) -> dict:
                 missing.append(f"{path.relative_to(root)} -> {target}")
 
     if missing:
-        raise AssertionError("Broken wiki links: " + "; ".join(missing))
+        raise AssertionError("发现 Wiki 死链: " + "; ".join(missing))
 
     return {"wiki_pages": len(pages), "wiki_links": checked}
 
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Usage: validate_graph.py <demo-root>", file=sys.stderr)
+        print("用法: validate_graph.py <demo-root>", file=sys.stderr)
         return 2
 
     root = Path(sys.argv[1]).resolve()

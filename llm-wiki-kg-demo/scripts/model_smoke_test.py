@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run an OpenAI-compatible model smoke test without storing secrets."""
+"""在不保存密钥的前提下运行 OpenAI-compatible 模型 smoke test。"""
 
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ def write_report(root: Path, report: dict) -> None:
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("Usage: model_smoke_test.py <demo-root>", file=sys.stderr)
+        print("用法: model_smoke_test.py <demo-root>", file=sys.stderr)
         return 2
 
     root = Path(sys.argv[1]).resolve()
@@ -49,7 +49,7 @@ def main() -> int:
         "started_at": started_at,
         "base_url": base_url,
         "model": model,
-        "reason": "OPENAI_API_KEY is not set",
+        "reason": "未设置 OPENAI_API_KEY",
     }
 
     if not api_key:
@@ -61,15 +61,15 @@ def main() -> int:
         encoding="utf-8"
     )
     prompt = (
-        "Extract a tiny knowledge graph from the fake product source.\n"
-        "Return valid JSON only. Do not use markdown fences. Do not add explanations.\n"
-        "Use exactly this shape:\n"
+        "请从下面的假产品资料中抽取一个很小的知识图谱。\n"
+        "只返回合法 JSON，不要使用 markdown 代码块，不要添加解释。\n"
+        "严格使用这个结构:\n"
         "{\"entities\":[{\"name\":\"品原AI一体机\",\"type\":\"product\"}],"
         "\"relations\":[{\"source\":\"品原AI一体机\",\"relation\":\"has_capability\",\"target\":\"模型推理服务\"}]}\n"
-        "Allowed entity types: product, capability, component, scenario, boundary.\n"
-        "Allowed relation values: has_capability, has_component, supports_scenario, constrained_by.\n"
-        "Use short string values only. Do not include evidence text.\n"
-        "Source text:\n\n"
+        "允许的实体类型: product, capability, component, scenario, boundary。\n"
+        "允许的关系类型: has_capability, has_component, supports_scenario, constrained_by。\n"
+        "只使用短字符串值，不要包含证据原文。\n"
+        "源资料:\n\n"
         + source
     )
 
@@ -78,7 +78,7 @@ def main() -> int:
         "messages": [
             {
                 "role": "system",
-            "content": "You extract small product knowledge graphs. Return strict JSON only.",
+            "content": "你负责抽取小型产品知识图谱。只返回严格 JSON。",
             },
             {"role": "user", "content": prompt},
         ],
@@ -103,9 +103,9 @@ def main() -> int:
         content = data["choices"][0]["message"]["content"]
         extracted = extract_json(content)
         if not isinstance(extracted.get("entities"), list):
-            raise ValueError("entities is not a list")
+            raise ValueError("entities 不是列表")
         if not isinstance(extracted.get("relations"), list):
-            raise ValueError("relations is not a list")
+            raise ValueError("relations 不是列表")
 
         report = {
             "status": "pass",

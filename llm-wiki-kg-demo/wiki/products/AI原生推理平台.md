@@ -1,24 +1,23 @@
 # AI原生推理平台
 
-AI原生推理平台 is a fake cloud-native inference platform used to test cross-product graph links. It shares the [[模型推理]] concept with [[品原AI一体机]].
+AI原生推理平台是本 demo 中的假想云原生推理平台，用于验证跨产品图谱链接。它与 [[品原AI一体机]] 共享 [[模型推理]] 这个概念。
 
-## Capabilities
+## 能力
 
 - [[模型推理]]
 - 推理加速
 - 弹性伸缩
 
-## Components
+## 组件
 
 - 模型服务控制器
 - 推理网关
 - 资源调度器
 
-## Boundary
+## 边界
 
-Platform claims must not replace formal SLA, pricing, or delivery commitments.
+平台能力描述不能替代正式 SLA、报价或交付承诺。
 
-## Sources
+## 来源
 
 - `llm-wiki-kg-demo/sources/products/ai-native-inference-platform.md`
-

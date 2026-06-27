@@ -1,16 +1,15 @@
 # GCU
 
-GCU is a fake inference acceleration component in this demo. It supports [[模型推理]] for [[品原AI一体机]].
+GCU 是本 demo 中的假想推理加速组件，用于支持 [[品原AI一体机]] 的 [[模型推理]]。
 
-## Related Product
+## 相关产品
 
 - [[品原AI一体机]]
 
-## Related Concept
+## 相关概念
 
 - [[模型推理]]
 
-## Sources
+## 来源
 
 - `llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md`
-

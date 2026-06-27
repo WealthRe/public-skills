@@ -1,18 +1,17 @@
-# Validation Notes
+# 校验说明
 
-## Expected Result
+## 预期结果
 
-- JSONL files parse successfully.
-- All relation endpoints exist in `entities.jsonl`.
-- All relation evidence IDs exist in `evidence.jsonl`.
-- All evidence paths exist in `sources/`.
-- All Obsidian `[[links]]` resolve to Wiki page stems.
+- JSONL 文件都能成功解析。
+- 所有关系端点都能在 `entities.jsonl` 中找到。
+- 所有关系的证据 ID 都能在 `evidence.jsonl` 中找到。
+- 所有证据路径都指向 `sources/` 中真实存在的文件。
+- 所有 Obsidian `[[链接]]` 都能解析到 Wiki 页面名称。
 
-## Business Checks
+## 业务检查
 
-- 品原AI一体机 has 模型推理, 视频分析, and 资源监控.
-- 品原AI一体机 has GCU.
-- 品原AI一体机 supports 边缘推理.
-- 医院边缘推理 POC uses 品原AI一体机.
-- 报价边界 marks pricing as non-final.
-
+- 品原AI一体机具备模型推理、视频分析和资源监控能力。
+- 品原AI一体机包含 GCU。
+- 品原AI一体机支持边缘推理场景。
+- 医院边缘推理 POC 使用品原AI一体机。
+- 报价边界标记报价信息不是最终结论。

@@ -1,24 +1,23 @@
-# LLM Wiki Index
+# LLM Wiki 索引
 
-This Wiki is generated from fake source data for validation.
+这个 Wiki 由假源资料生成，用于验证双向链接和知识图谱流程。
 
-## Products
+## 产品
 
 - [[品原AI一体机]]
 - [[AI原生推理平台]]
 
-## Concepts
+## 概念
 
 - [[模型推理]]
 - [[边缘推理]]
 - [[报价边界]]
 
-## Entities
+## 实体
 
 - [[GCU]]
 - [[医院边缘推理 POC]]
 
-## Source Rule
+## 来源规则
 
-Generated pages must cite files under `llm-wiki-kg-demo/sources/`.
-
+生成页面必须引用 `llm-wiki-kg-demo/sources/` 下的来源文件。

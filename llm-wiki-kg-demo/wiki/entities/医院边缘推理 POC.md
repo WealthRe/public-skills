@@ -1,17 +1,16 @@
 # 医院边缘推理 POC
 
-医院边缘推理 POC is a fake case that validates [[边缘推理]], video analysis, and local [[模型推理]] with [[品原AI一体机]].
+医院边缘推理 POC 是本 demo 中的假想案例，用于验证 [[品原AI一体机]] 在 [[边缘推理]]、视频分析和本地 [[模型推理]] 场景中的关系。
 
-## Related Product
+## 相关产品
 
 - [[品原AI一体机]]
 
-## Related Concepts
+## 相关概念
 
 - [[边缘推理]]
 - [[模型推理]]
 
-## Sources
+## 来源
 
 - `llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md`
-

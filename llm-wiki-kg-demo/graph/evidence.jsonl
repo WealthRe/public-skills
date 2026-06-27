@@ -1,10 +1,9 @@
-{"id":"evidence:000001","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source lists 模型推理服务 as a capability of 品原AI一体机."}
-{"id":"evidence:000002","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source lists 视频分析 as a capability of 品原AI一体机."}
-{"id":"evidence:000003","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source lists 资源监控 as a capability of 品原AI一体机."}
-{"id":"evidence:000004","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source lists GCU as a component for inference acceleration."}
-{"id":"evidence:000005","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source lists 医院边缘推理 as a supported scenario."}
-{"id":"evidence:000006","path":"llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md","summary":"The POC case lists 品原AI一体机 as the used product."}
-{"id":"evidence:000007","path":"llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md","summary":"The POC case lists 视频分析 as a used capability."}
-{"id":"evidence:000008","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"The source states pricing configuration is only a presales estimate and needs confirmation."}
-{"id":"evidence:000009","path":"llm-wiki-kg-demo/sources/products/ai-native-inference-platform.md","summary":"The source lists 模型服务 as a capability of AI原生推理平台."}
-
+{"id":"evidence:000001","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件列出模型推理服务是品原AI一体机的一项能力。"}
+{"id":"evidence:000002","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件列出视频分析是品原AI一体机的一项能力。"}
+{"id":"evidence:000003","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件列出资源监控是品原AI一体机的一项能力。"}
+{"id":"evidence:000004","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件列出 GCU 是用于推理加速的组件。"}
+{"id":"evidence:000005","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件列出医院边缘推理是支持的场景。"}
+{"id":"evidence:000006","path":"llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md","summary":"POC 案例列出品原AI一体机是使用的产品。"}
+{"id":"evidence:000007","path":"llm-wiki-kg-demo/sources/cases/hospital-edge-inference-poc.md","summary":"POC 案例列出视频分析是使用的能力。"}
+{"id":"evidence:000008","path":"llm-wiki-kg-demo/sources/products/pinyuan-ai-appliance.md","summary":"来源文件说明报价配置只能作为售前估算依据，需要销售和产品确认。"}
+{"id":"evidence:000009","path":"llm-wiki-kg-demo/sources/products/ai-native-inference-platform.md","summary":"来源文件列出模型服务是 AI原生推理平台的一项能力。"}
